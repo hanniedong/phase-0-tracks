@@ -8,4 +8,4 @@
 
 * What is a commit? What makes a good commit message? . A commit permanently stores changes from the staging area inside the repository and is essentially a save point for the project. A good commit message is detailed and documents the changes made since hte last commit.
 
-* What is a merge conflict? Merge conflicts may occur if changes are made to the same line of a file. It happens when commits are made on separate branches that alter the same line in conflicting ways.
+* What is a merge conflict? Merge conflicts may occur if changes are made to the same line of a file. It happens when commits are made on separate branches that alter the same line in conflicting ways. 
