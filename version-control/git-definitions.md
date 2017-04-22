@@ -2,7 +2,7 @@
 
 **Instructions: ** Define each of the following Git concepts.
 
-* What is version control?  Why is it useful? Version control keeps tracks of chanages made to a project over time. It allows people to view the entire history of revisions made it o files and merge revisions made my different people. Version control essentially makes it easy for developors to collaborate and share work with others. 
+* What is version control?  Why is it useful? Version control keeps tracks of changes made to a project over time. It allows people to view the entire history of revisions made to files and merge revisions made by different people. Version control essentially makes it easy for developers to collaborate and share work with others. 
 
 * What is a branch and why would you use one? A branch is a "copy" of the project. Branching allows users to experiment with different versions of a project by checking out separate branches to work on.
 
