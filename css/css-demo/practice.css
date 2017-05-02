@@ -1,0 +1,26 @@
+#contact-info{
+	font-size: .8em;
+}
+.job{
+	background-color: #e9e5dc;
+	border-radius: 25px;
+	padding-top: 10px;
+}
+.accomplishments{
+	font-size: .8em;
+}
+
+ul > li {
+  background-color: DodgerBlue;
+}
+/*pseudo selectors
+
+selector: pseudo-class{
+	property:value;
+	]
+
+ex: a: hover{
+	font-color: blue;
+	}
+
+The element>element selector is used to select elements with a specific parent.*/
