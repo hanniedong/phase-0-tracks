@@ -3,17 +3,20 @@
 }
 .job{
 	background-color: #e9e5dc;
-	border-radius: 25px;
-	padding-top: 10px;
+	border-radius: 15px;
+	padding: 5px;
+	margin-top: 10px;
 }
 .accomplishments{
 	font-size: .8em;
 }
 
 ul > li {
-  background-color: DodgerBlue;
+  color: #8b2323;
 }
-/*pseudo selectors
+
+/*pseudo selectors: A CSS pseudo-class is a keyword added to selectors that 
+specifies a special state of the element to be selected;
 
 selector: pseudo-class{
 	property:value;
@@ -23,4 +26,5 @@ ex: a: hover{
 	font-color: blue;
 	}
 
-The element>element selector is used to select elements with a specific parent.*/
+The element>element selector is used to select elements with a specific parent.
+Can be used to select the child element of another element*/
