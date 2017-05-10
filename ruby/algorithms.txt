@@ -1,0 +1,22 @@
+How to use an elevator
+-Ask human if he would like to go up or down in the building.
+-If Human would like to go up:
+     -Click the up arrow and wait for elevator with human until it arrives
+-If human would like to go down:
+     -Click the down arrow and wait for elevator with human until it arrives
+-When the elevator doors open, follow human inside and stand still in the elevator
+-Ask human, "Which floor would you like to go to?"
+-When human responds, press the button located on the inside of the elevator that corresponds with the number that human has chosen
+-Stand still while elevator is moving
+-When elevator stops and the doors open, check if the floor number corresponds with the floor number the human has chosen
+-If floor number is incorrect:
+     -Stay inside elevator until you reach the correct floor
+-Otherwise:
+     -if floor number is correct:
+          -Leave elevator with human by stepping out of the doors
+-If elevator stops moving:
+     -Ask human if there is something wrong with the elevator
+     -if human says yes:
+          -click on the alarm button and wait for help
+     -if human says no:
+          -stand still in elevator and wait for the correct floor number
