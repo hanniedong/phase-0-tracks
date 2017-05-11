@@ -1,3 +1,7 @@
+puts "How many employees are there to be processed?"
+employees = gets.to_i
+
+until employees == 0
 puts "What is your name?"
 name = gets.chomp
 
@@ -51,4 +55,6 @@ elsif vampires_name
 	puts "Definitely a vampire."
 else
 	puts “Results inconclusive.”
+end
+
 end
