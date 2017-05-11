@@ -20,13 +20,13 @@ age = gets.to_i
 puts "What year were you born?"
 year = gets.to_i
 
-	if Time.new.year - year == age
-		vampires_age = false
-		puts "Age and year of birth lines up mathematically"
-	else
-		vampires_age = true
-		puts "Age and year of birth does not line up mathematically"
-	end
+if Time.new.year - year == age
+	vampires_age = false
+	puts "Age and year of birth lines up mathematically"
+else
+	vampires_age = true
+	puts "Age and year of birth does not line up mathematically"
+end
 
 puts "Our company cafeteria serves garlic bread. Should we order some for you? (y or n)"
 garlic = gets.chomp
@@ -61,7 +61,7 @@ end
 if allergies == "sunshine"
 	puts "Probably a vampire"
 elsif !vampires_age && (!vampires_garlic || !vampires_insurance)
-  puts "Probably not a vampire."
+  	puts "Probably not a vampire."
 elsif vampires_age && (vampires_garlic || vampires_insurance) 
 	puts "Probably a vampire."
 elsif vampires_age && vampires_garlic && vampires_insurance 
@@ -69,7 +69,7 @@ elsif vampires_age && vampires_garlic && vampires_insurance
 elsif vampire_name
 	puts "Definitely a vampire."
 else
-  puts "Results inconclusive"
+  	puts "Results inconclusive"
 end
 
 employees = employees - 1
