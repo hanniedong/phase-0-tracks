@@ -1,7 +1,8 @@
 puts "How many employees are there to be processed?"
 employees = gets.to_i
 
-until employees == 0
+while employees > 0
+
 puts "What is your name?"
 name = gets.chomp
 
@@ -10,7 +11,7 @@ if name == "Drake Cula"
 elsif name == "Tu Fang"
 	vampire_name = true
 else
-	normal_name = true
+	vampire_name = false
 end
 	
 puts "How old are you?"
@@ -20,7 +21,7 @@ puts "What year were you born?"
 year = gets.to_i
 
 	if 2017 - year == age
-		normal_age = true 
+		vampires_age = false
 		puts "Age and year of birth lines up mathematically"
 	else
 		vampires_age = true
@@ -31,7 +32,7 @@ puts "Our company cafeteria serves garlic bread. Should we order some for you? (
 garlic = gets.chomp
 
 if garlic == "y"
-	normal_garlic = true
+	vampires_garlic = false
 else 
 	vampires_garlic = true
 end
@@ -40,21 +41,22 @@ puts "Would you like to enroll into the company's health insurance? (y or n)"
 insurance = gets.chomp
 
 if insurance == "y"
-	normaL_insurance = true
+	vampires_insurance = false
 else 
 	vampires_insurance = true
 end
 
-if normal_age && (normal_garlic || normal_insurance)
-	puts “Probably not a vampire.”
+if !vampires_age && (!vampires_garlic || !vampires_insurance)
+  puts "Probably not a vampire."
 elsif vampires_age && (vampires_garlic || vampires_insurance) 
-	puts “Probably a vampire.”
+	puts "Probably a vampire."
 elsif vampires_age && vampires_garlic && vampires_insurance 
-	puts “Almost certainly a vampire.”
-elsif vampires_name
+	puts "Almost certainly a vampire."
+elsif vampire_name
 	puts "Definitely a vampire."
 else
-	puts “Results inconclusive.”
+	puts "Results inconclusive."
 end
 
+employees = employees - 1
 end
