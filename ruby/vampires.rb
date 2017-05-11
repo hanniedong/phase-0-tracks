@@ -46,7 +46,21 @@ else
 	vampires_insurance = true
 end
 
-if !vampires_age && (!vampires_garlic || !vampires_insurance)
+
+loop do
+	puts "Please list all of your allergies one at a time. Write done when done listing."
+	allergies = gets.chomp
+	if allergies == "sunshine"
+		puts "You're allergic to the sun!"
+	break
+	elsif allergies == "done"
+	break
+	end
+end
+
+if allergies == "sunshine"
+	puts "Probably a vampire"
+elsif !vampires_age && (!vampires_garlic || !vampires_insurance)
   puts "Probably not a vampire."
 elsif vampires_age && (vampires_garlic || vampires_insurance) 
 	puts "Probably a vampire."
@@ -55,8 +69,10 @@ elsif vampires_age && vampires_garlic && vampires_insurance
 elsif vampire_name
 	puts "Definitely a vampire."
 else
-	puts "Results inconclusive."
+  puts "Results inconclusive"
 end
 
 employees = employees - 1
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
