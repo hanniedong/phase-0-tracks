@@ -20,7 +20,7 @@ age = gets.to_i
 puts "What year were you born?"
 year = gets.to_i
 
-	if 2017 - year == age
+	if Time.new.year - year == age
 		vampires_age = false
 		puts "Age and year of birth lines up mathematically"
 	else
