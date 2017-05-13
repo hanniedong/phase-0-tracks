@@ -14,7 +14,7 @@ empty_string = ""
 	while index < string.length
 		if string[index] == "z"
 			empty_string = "a"
-		else empty_strisng = empty_string + string[index].next
+		else empty_string = empty_string + string[index].next
 		end
 		index +=1
 	end
@@ -59,3 +59,24 @@ Why does decrypt(encrypt("swordfish")) work? This nested call method works becau
 encrypt method provides the argument of the decrypt method. 
 =end
 
+=begin
+Add an interface
+Ask user if they would like to decrypt or encrypt and save input as variable
+Ask for password and save it as variable
+Use if/else to call for encrypt or decrypt setting password as argument
+Run operation
+=end
+
+puts "Hello! Would you like to encrypt or decrypt your code?"
+input = gets.chomp
+
+puts "What is your password?"
+password = gets.chomp
+
+if input == "encrypt"
+	p encrypt(password)
+elsif input == "decrypt"
+	p decrypt(password)
+else 
+	p "Please choose to encrypt or decrypt."
+end
