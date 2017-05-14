@@ -54,5 +54,26 @@
 
 #miscellaneous tests
 
+"What happened?".chop
+# => "What happened"
 
+"was them!".prepend('It ')
+# => "It was them!"
 
+"AHHHH".slice!(1..3)
+# => "HHH"
+
+"a".ord
+# => 97
+
+"way".insert(0, "No ")
+# => No way 
+
+"BbBbBbrRR".swapcase
+# => "bBbBbBRrr"
+
+"It was Dev".replace "It was DevBootcamp!"
+# => "It was DevBootcamp!"
+
+"I knew it!".upcase
+# => "I KNEW IT!"
