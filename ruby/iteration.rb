@@ -32,3 +32,16 @@ myarray.map! do |fruit|
   puts "10" + " #{fruit}" 
 end
 
+#Release 2
+
+p array1.delete_if {|x| x<5}
+puts hash1.delete_if {|k, v| v <5}
+
+p array1.keep_if {|x| x <= 5}
+p hash1.keep_if {|k, v| v < 5}
+
+p array1.select {|x| x <= 5}
+p hash1.select {|k, v| v < 5}
+
+p array1.reject {|x| x <= 5}
+p hash1.reject {|k, v| v < 5}
