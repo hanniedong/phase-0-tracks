@@ -26,6 +26,15 @@ number_of_children = gets.to_i
 puts "What is your preferred decor theme?"
 decor_theme = gets.chomp
 
+puts "What are your wallpaper preferences? Please list as many as you would like and type exit when done."
+  wallpaper_preferences = []
+loop do
+  puts "Enter your preference."
+  input= gets.chomp
+  break if input == "exit"
+  wallpaper_preferences << input
+  end
+
 puts "What is your favorite color?"
 favorite_color = gets.chomp
 
@@ -34,5 +43,46 @@ response = {
   age: age_provided,
   children: number_of_children,
   theme: decor_theme, 
+  wallpaper: wallpaper_preferences,
   color: favorite_color
 }
+
+p response 
+
+puts "Would you like to update any of your responses?"
+puts "Put down name, age, number of children, decor theme, or color if you would like to change any of those answers. If not please answer no."
+
+change_response = gets.chomp
+if change_response == "name"
+  puts "What would you like to change it to?"
+  response[:name] = gets.chomp.
+elsif change_response == "age"
+  puts "What would you like to change it to? (Please input integer)"
+  response[:age] = gets.to_i
+elsif change_response == "a"
+  puts "What would you like to change it to? (Please input integer)"
+  response[:age] = gets.to_i
+elsif  change_response == "decor theme"
+  puts "What would you like to change it to?"
+  response[:theme] = gets.chomp
+elsif change_response == "wallpaper preferences"
+  puts "What would you like to add?"
+  response[:wallpaper] == []
+  loop do
+  puts "Enter your additional preferences."
+  input= gets.chomp
+  break if input == "exit"
+  response[:wallpaper] << input
+  end
+elsif  change_response == "color"
+  puts "What would you like to change it to?"
+  response[:color] = gets.chomp
+elsif change_response == "no"
+  puts "Thank you for your response!"
+else 
+  puts "Please put in a valid response."
+end
+
+p response
+puts "Here is the final input. Thank you for your time!"
+  
