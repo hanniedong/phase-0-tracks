@@ -50,7 +50,7 @@ response = {
 p response 
 
 puts "Would you like to update any of your responses?"
-puts "Put down name, age, number of children, decor theme, or color if you would like to change any of those answers. If not please answer no."
+puts "Put down name, age, number of children, decor theme, wallpaper preferences, or color if you would like to change any of those answers. If not please answer no."
 
 change_response = gets.chomp
 if change_response == "name"
@@ -85,4 +85,3 @@ end
 
 p response
 puts "Here is the final input. Thank you for your time!"
-  
