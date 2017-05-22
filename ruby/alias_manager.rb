@@ -32,3 +32,13 @@ Ask user if they would like to encrypt another name.
 If yes, ask what the name is and encrypt it
 If no, exit program.
 =end
+
+puts "What is your first name?"
+first_name = gets.chomp.capitalize
+puts "What is your last name?"
+last_name = gets.chomp.capitalize
+
+puts "Would you like to encrypt your name?"
+input = gets.chomp
+
+input_name = last_name + " " + first_name
