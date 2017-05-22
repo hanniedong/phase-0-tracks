@@ -62,7 +62,6 @@ end
 def consonent_changer(swapped_name_and_vowel)
 cap_consonents = ['B','C','D','F','G','H','J','K','L','M','N','P','Q','R','S','T','V','W','X','Y','Z']
 consonents = ['b','c','d','e','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','y','z']
-final_name = ''
 swapped_name_vowel_array= swapped_name_and_vowel.split('')
 swapped_name_and_vowel_and_consonant = swapped_name_vowel_array.map do |letter|
   if consonents.include?(letter)
@@ -76,3 +75,24 @@ end
 final_name = swapped_name_and_vowel_and_consonant.join
 p "Your final fake name is #{final_name}"
 end
+
+consonent_changer(vowel_changer(input_name))
+
+
+loop do
+  puts "Would you like to encrypt another name?"
+  inputs = gets.chomp
+  if inputs == "yes"
+    puts "What is the name?"
+    encrypt_name = gets.chomp
+    consonent_changer(vowel_changer(encrypt_name))
+  elsif inputs == "exit"
+     p "Thank you for using this program!"
+     break
+  else
+    p "Please type yes if you would like to encrypt another name."
+  end
+end
+
+
+
