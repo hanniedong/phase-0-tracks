@@ -42,3 +42,19 @@ puts "Would you like to encrypt your name?"
 input = gets.chomp
 
 input_name = last_name + " " + first_name
+
+def vowel_changer(swapped_name)
+vowels = ['a', 'e', 'i', 'o', 'u']
+cap_vowels = ['A','E','I','O','U']
+swapped_name_array= swapped_name.split('')
+swapped_name_and_vowel = swapped_name_array.map do |letter|
+  if vowels.include?(letter)
+    vowels.rotate(1)[vowels.index(letter)]
+  elsif cap_vowels.include?(letter)
+    cap_vowels.rotate(1)[cap_vowels.index(letter)]
+  else
+    letter
+  end
+end
+swapped_name_and_vowel_string = swapped_name_and_vowel.join 
+end
