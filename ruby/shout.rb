@@ -1,5 +1,6 @@
 #RELEASE 1
 
+=begin
 module Shout
 	def self.yell_angry(words)
 		words + "!!!" + " :("
@@ -12,6 +13,29 @@ end
 
 p Shout.yell_angry("WHAT")
 p Shout.yelling_happy("Yes!")
+=end
+
+#RELEASE 3
+module Shout
+	def yell_angry(words)
+		puts words + "!!!" + " :("
+	end
+end
+
+class Teacher
+	include Shout
+end
+
+class Mom
+	include Shout
+end
+
+history_teacher = Teacher.new
+history_teacher.yell_angry("Where is your homework")
+
+daniels_mom = Mom.new
+daniels_mom.yell_angry("Clean your room")
+
 
 #RELEASE 2
 module Flight
