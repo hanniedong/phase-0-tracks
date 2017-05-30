@@ -1,0 +1,35 @@
+DIRECTIONS
+One user can enter a word (or phrase, if you would like your game to support that), and another user attempts to guess the word.
+Guesses are limited, and the number of guesses available is related to the length of the word.
+Repeated guesses do not count against the user.
+The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the user will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the user enters a guess of "c".
+The user should get a congratulatory message if they win, and a taunting message if they lose.
+
+#USERINTERFACE
+step 1: ask user 1 for word
+step 2: ask user 2 for word
+    #run through guess method UNTIL guess run out
+    #IF user guesses correctly, state you win!
+    #IF user guesses incorrectly, state you lose!
+
+Class HANGMAN
+#method: initialize game 
+#method: check_letter(index)
+
+#METHOD: INITIALIZE GAME
+
+#METHOD: NEW WORD
+#input: user's word
+#STEPS
+      #input = word 
+      #set number of guesses to the length of the word
+      #split word and store as array
+
+#METHOD: GUESSING LETTER
+#INPUT: letter
+#STEPS
+    #IF guess is already in array, say "you already guessed that!"
+    #IF guess is not in array, run guess method to see if the letter is in the word
+    #IF guess is not in array, run method to see if the letter is in the word
+    #IF letter is in the word, print it in the word with the rest being blank spaces
+    #IF letter is not in word, print out "letter is not in word"
