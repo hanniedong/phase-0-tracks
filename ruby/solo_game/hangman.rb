@@ -53,7 +53,7 @@ def guess_letter(input_letter)
   end
 end
 
-=begin
+
 #USER INTERFACE
 puts "Welcome to the Word Game! Player 1 will choose the word. Player 2 will be guessing the word. Guesses are limited and the number of guesses available to related to the length of the word. Repeated guesses do not count against you. HAVE FUN!"
 game = Hangman.new
@@ -81,4 +81,3 @@ until game.guess_count == game.count
 end
 
 puts "GAMEOVER. Sorry, you ran out of guesses."
-=end
