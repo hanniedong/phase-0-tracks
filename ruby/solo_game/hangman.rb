@@ -1,10 +1,10 @@
 class Hangman
-	attr_accessor :user_word
-	attr_accessor :underscore_word
-	attr_accessor :user_array
-	attr_accessor :guess_count
-	attr_accessor :count
-	attr_accessor :underscore_word_array
+  attr_accessor :user_word
+  attr_accessor :underscore_word
+  attr_accessor :user_array
+  attr_accessor :guess_count
+  attr_accessor :count
+  attr_accessor :underscore_word_array
 
 def initialize
   @guess_count = 0 
@@ -24,6 +24,9 @@ def underscore_word(input)
   @underscore_word = "-" * input.length
   @underscore_word_array = @underscore_word.split(//)
   p @underscore_word
+end
+
+def counting_guesses(input)
   @count = input.length
   "You have #{@count} guesses!"
 end
@@ -50,7 +53,7 @@ def guess_letter(input_letter)
   end
 end
 
-
+=begin
 #USER INTERFACE
 puts "Welcome to the Word Game! Player 1 will choose the word. Player 2 will be guessing the word. Guesses are limited and the number of guesses available to related to the length of the word. Repeated guesses do not count against you. HAVE FUN!"
 game = Hangman.new
@@ -62,7 +65,8 @@ game.user_word(input)
 
 #Ask user 2 for input
 puts "User 2: Guess the letters for the word below."
-p game.underscore_word(input)
+game.underscore_word(input)
+p game.counting_guesses(input)
 
 until game.guess_count == game.count
   puts "Please enter a letter."
@@ -77,3 +81,4 @@ until game.guess_count == game.count
 end
 
 puts "GAMEOVER. Sorry, you ran out of guesses."
+=end
