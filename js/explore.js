@@ -5,7 +5,7 @@
 	//store letters into a new empty variable
 	//call function and store result of function into new variable 
 //output: reversed stringfunction reverse(string){
-	
+
 function reverse(string){
 	var reversedWord = ""
 	for (var i = string.length - 1; i >= 0; i --){
@@ -16,5 +16,11 @@ function reverse(string){
 var reversedInput = reverse("yellow")
 console.log(reversedInput)
 
-
+var normal = false;
+if (normal){
+	console.log(reversedInput);
+}
+else {
+	console.log("It is already reversed.");
+}
 
