@@ -74,3 +74,9 @@ function randomWords(integer){
  console.log(matchItems(person1, person2));
  //RELEASE 2
 console.log(randomWords(7))
+//
+for (var i = 1; i<= 10; i++) {
+  var randomTest = (randomWords(Math.random()*10));
+  console.log(randomTest);
+  console.log(findLongestWord(randomTest));
+}
