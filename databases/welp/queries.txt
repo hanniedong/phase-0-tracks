@@ -1,0 +1,13 @@
+SELECT * from businesses, reviews, users WHERE businesses.id = reviews.business_id and  users.id = reviews.user_id;
+1|Grundy Hollow Wedding Chapel|1|4|It was great!|1|1|1|Bradford|Pitt
+3|The Beagle Nightclub|2|3|Not very helpful|3|2|2|Mandy|Kaling
+1|Grundy Hollow Wedding Chapel|4|4|Loved it|1|2|2|Mandy|Kaling
+
+select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from users, businesses JOIN reviews ON reviews.business_id = businesses.id and reviews.user_id = users.id;
+Bradford|Pitt|Grundy Hollow Wedding Chapel|4|It was great!
+Mandy|Kaling|The Beagle Nightclub|3|Not very helpful
+Mandy|Kaling|Grundy Hollow Wedding Chapel|4|Loved it
+
+select users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment from users, businesses JOIN reviews ON reviews.business_id = businesses.id and reviews.user_id = users.id and businesses.name = "Grundy Hollow Wedding Chapel";
+Bradford|Pitt|Grundy Hollow Wedding Chapel|4|It was great!
+Mandy|Kaling|Grundy Hollow Wedding Chapel|4|Loved it
