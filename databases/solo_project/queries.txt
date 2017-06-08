@@ -1,0 +1,27 @@
+1) sqlite> SELECT * FROM songs;
+1|Adorn|2013|1
+2|Sure Thing|2013|1
+3|Crazy Dream|2016|2
+4|In the Midst of it All|2015|2
+5|Never Be LIke You|2016|3
+6|Say It|2016|3
+
+2)update songs set name = "Tennis Court" where id = 5;
+
+3)SELECT * FROM songs, artists WHERE songs.artist_id = artists.id;
+1|Adorn|2013|1|1|Miguel
+2|Sure Thing|2013|1|1|Miguel
+3|Crazy Dream|2016|2|2|Tom Misch
+4|In the Midst of it All|2015|2|2|Tom Misch
+5|Tennis Court|2016|3|3|Flume
+6|Say It|2016|3|3|Flume
+
+4)SELECT songs.name, songs.year, artists.name FROM songs JOIN artists ON songs.artist_id = artists.id;
+Adorn|2013|Miguel
+Sure Thing|2013|Miguel
+Crazy Dream|2016|Tom Misch
+In the Midst of it All|2015|Tom Misch
+Tennis Court|2016|Flume
+Say It|2016|Flume
+
+5)DELETE FROM songs where year = 2015;
