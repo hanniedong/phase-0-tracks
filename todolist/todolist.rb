@@ -22,14 +22,15 @@ def display_list(db)
 	end
 end
 
+def add_task(db)
+	puts "Add the task."
+	input_task = gets.chomp
+	puts "Provide a description for the task."
+	input_description = gets.chomp
+	db.execute("INSERT INTO tasks(task, description, completed) VALUES ('#{input_task}', '#{input_description}', 'no')")
+end 
+
 #Driver code
-puts "Provide the task."
-input_task = gets.chomp
-puts "Provide a description for the task."
-input_description = gets.chomp
-
-db.execute("INSERT INTO tasks(task, description, completed) VALUES ('#{input_task}', '#{input_description}', 'no')")
-
 puts "Would you like to see the list?"
 input = gets.chomp
 if input == "yes"
@@ -39,5 +40,19 @@ elsif input == "no"
 else
 	puts "Please provide a valid input"
 end	
-		
 
+loop do		
+puts "Would you like to add a task? Type list if you would like to see updated list. Type done when finished"
+answer_task = gets.chomp
+	if answer_task == "yes"
+		updated_task = add_task(db)
+		puts updated_task 
+	elsif answer_task == "list"
+		display_list(db)
+		break
+	elsif answer_task == "done"
+		break
+	else
+		puts "Please provide valid input"
+	end
+end
