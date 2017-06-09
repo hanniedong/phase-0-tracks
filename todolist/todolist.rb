@@ -22,6 +22,12 @@ def display_list(db)
 	end
 end
 
+def update_task(db)
+	puts "What task would you like to mark as complete?"
+	input_update = gets.chomp
+	db.execute("UPDATE tasks SET completed='yes' WHERE task='#{input_update}'")
+end
+
 def add_task(db)
 	puts "Add the task."
 	input_task = gets.chomp
@@ -30,27 +36,36 @@ def add_task(db)
 	db.execute("INSERT INTO tasks(task, description, completed) VALUES ('#{input_task}', '#{input_description}', 'no')")
 end 
 
-#Driver code
-puts "Would you like to see the list?"
-input = gets.chomp
-if input == "yes"
-	display_list(db)
-elsif input == "no"
-	puts "Thank you for using our program"
-else
-	puts "Please provide a valid input"
-end	
+def delete_task(db)
+	puts "What task would you like to delete?"
+	input_delete = gets.chomp
+	db.execute("DELETE FROM TASKS WHERE task='#{input_delete}'")
+end
 
-loop do		
-puts "Would you like to add a task? Type list if you would like to see updated list. Type done when finished"
+#Driver code
+puts "Welcome to the Task Tracker!"
+puts "Type ADD if you would like to add a task"
+puts "Type SEE if you would like to see updated list."
+puts "Type UPDATE if you would like to mark task as complete."
+puts "Type DELETE if you would like to delete task."
+puts "Type EXIT when finished"
+loop do	
+puts "Would you like to ADD, UPDATE, DELETE, SEE list, or EXIT?"
 answer_task = gets.chomp
-	if answer_task == "yes"
+	if answer_task == "ADD"
 		updated_task = add_task(db)
-		puts updated_task 
-	elsif answer_task == "list"
+		display_list(db)
+	elsif answer_task == "UPDATE"
+		completed_task = update_task(db)
+		display_list(db)
+	elsif answer_task == "DELETE"
+		delete_task (db)
+		display_list(db)
+	elsif answer_task == "SEE"
 		display_list(db)
 		break
-	elsif answer_task == "done"
+	elsif answer_task == "EXIT" 
+		display_list(db)
 		break
 	else
 		puts "Please provide valid input"
