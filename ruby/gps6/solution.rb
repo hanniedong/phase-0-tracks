@@ -1,11 +1,13 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+#Require_relative complements the builtin method require by allowing you to load a file that is relative to the file containing the require_relative statement.
+#It allows you to load a file that you have created into the present working file.
+#Requre is used to include any defined ruby program in third program body. It loads a file a standard library that Ruby comes loaded with or that is saved somewhere else on the computer.
+
 require_relative 'state_data'
 
 class VirusPredictor
@@ -16,12 +18,13 @@ class VirusPredictor
     @population_density = population_density
   end
 
+
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
-  private
+private
 
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
