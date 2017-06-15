@@ -52,7 +52,6 @@ private
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
-
     if @population_density >= 200
       speed += 0.5
     elsif @population_density >= 150
@@ -90,7 +89,7 @@ alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density],
 alaska.virus_effects
 
 def virus_predictor(states)
-    states.each do |state, population_density, population|
+    states.each do |state, population_density, population_info|
       state_predictor = VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA[state][:population])
       state_predictor.virus_effects
     end
@@ -101,3 +100,20 @@ virus_predictor(STATE_DATA)
 
 #=======================================================================
 # Reflection Section
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The first hash is made of a string. The second hash used symbols to represent the relevant data for each state. 
+
+# What does require_relative do? How is it different from require?
+#Require_relative complements the builtin method require by allowing you to load a file that is relative to the file containing the require_relative statement.
+#It allows you to load a file that you have created into the present working file.
+#Requre is used to include any defined ruby program in third program body. 
+#It loads a file a standard library that Ruby comes loaded with or that is saved somewhere else on the computer.
+
+# What are some ways to iterate through a hash?
+# Using .each to iterate through the entire hash.  
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# In the virus_effect method, there were variables that were not needed because they are instance variables that are visible throughout the object. 
+
+# What concept did you most solidify in this challenge?
+# I now understand how to iterate through a nested hash 
