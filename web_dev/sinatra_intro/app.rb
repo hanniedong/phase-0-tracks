@@ -3,6 +3,7 @@ require 'sinatra'
 require 'sqlite3'
 
 db = SQLite3::Database.new("students.db")
+db = SQLite3::Database.new("persons.db")
 db.results_as_hash = true
 
 # write a basic GET route
@@ -21,6 +22,26 @@ end
 
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
+end
+
+get '/contact' do
+  "www.phase-0-tracks/information.com"
+end
+
+get "/add/:num1/:num2" do
+  num1 = params[:num1].to_i
+  num2 = params[:num2].to_i
+  sum = (num1+num2).to_s
+  "Answer is: #{sum}"
+end
+
+get '/greatjob' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
 end
 
 # write a GET route that retrieves
