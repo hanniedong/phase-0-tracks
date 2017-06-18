@@ -1,0 +1,57 @@
+h1 {
+	font-family: Impact;
+}
+
+h2 {
+	font-family: Impact;
+}
+
+p {
+	font-family: Tahoma;
+}
+
+li {
+	font-family: Tahoma;
+}
+
+table{
+	font-family: Tahoma;
+}
+
+.images{
+	display: inline-block;
+	width: 300px;
+	padding: 1%;
+	margin: 1%;
+	border: 2px dashed black;
+	border-radius: 5px;
+}
+.align {
+	display: inline-block;
+	text-align: left;
+}
+center{
+	display: block;
+}
+
+body{
+	text-align:center;
+}
+a:visited {
+	color: #2F4F4F;
+}
+a{
+	font-family: Tahoma;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 50%;
+    width: 100%;
+  }
+  .images{
+  	display: inline-block;
+  	width: 300px;
+  	padding: 1%;
+  	margin: 1%;
+  }
